@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    color: black;
+    height: 100vh;
+    transform: translate(20px) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.box {
+    position: relative;
+    width: 1000px ;
+    height: 500px ;
+    background: white;
+    padding: 30px;
+    transition: all 0.5s;
+  
+    
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+
+}
+
+p { 
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+p span {
+    display : inline-block;
+    position: relative;
+    overflow: hidden; 
+    font-size: clamp(20px, 8vw, 40px);
+}
+
+p span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background:  linear-gradient(45deg, rgb(62,76,39) 30%,rgb(109,114,101) 70%)
+}
+
+p:nth-child(1) {
+    font-weight: 300;
+    animation: txt-appearence 0s 1s
+    forwards;
+}
+
+p:nth-child(1) span::after {
+    background: black;
+    animation: slide-in 0.95 ease-out forwards,
+    slide-out 0.75s 0.5s ease-out forwards;
+}
+
+@keyframes slide-in {
+     100% {
+        transform: translateX(0%);
+     }
+
+}
+@keyframes slide-out {
+    100% {
+        transform: translateX(100%) ;
+    }
+}
+@keyframes txt-appearance {
+    100% {
+        color: black;
+    }
+}

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./lamnteklogo.png);
+    color: white;
+    font-family: arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ol {
+    list-style: none;
+    width: 300px;
+}
+
+ol li {
+    font-size: 1.2em;
+    background: rgb(23,23,23);
+    margin: 10px;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all .4s;
+    z-index: 5;
+}
+
+ol li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background: rgb(215,217,213);
+    background: linear-gradient(45deg, rgb(215,217,213) 30%,rgb(109,114,101) 70%);
+    transition: all .4s;
+    z-index: -1;
+}
+
+ol li:hover::before{
+    width: 100%;
+}
+
+ol li:nth-child(1)::before{
+    background: rgb(171,17,8);
+}
+
+ol li:nth-child(2)::before{
+    background: linear-gradient(red ,rgb(164,172,148));
+
+}
+ol li:nth-child(3)::before{
+    background: rgb(164,172,148);
+}
+
+ol li:hover {
+    transform: translateX(20px);
+}
+.whitewashing{
+    color: white !important;
+    text-decoration: none;
+}
+footer{
+    text-align: center;
+    margin: auto;
+    height: 50px;
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}   
